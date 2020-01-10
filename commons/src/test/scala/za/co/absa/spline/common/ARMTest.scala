@@ -46,7 +46,7 @@ class ARMTest
   "ARM.using(res)" should "close the resource after use" in {
     using(Resource.init)(managedResource => {
       managedResource should be theSameInstanceAs Resource.get
-      verifyZeroInteractions(managedResource)
+      verifyNoInteractions(managedResource)
     })
     verify(Resource.get).close()
   }
@@ -61,7 +61,7 @@ class ARMTest
   "ARM.managed(res)" should "support monadic style" in {
     for (managedResource <- managed(Resource.init)) {
       managedResource should be theSameInstanceAs Resource.get
-      verifyZeroInteractions(managedResource)
+      verifyNoInteractions(managedResource)
     }
     verify(Resource.get).close()
   }
@@ -76,7 +76,7 @@ class ARMTest
   "ARM.managed(fn)" should "wrap the given function" in {
     val managedFn = managed((res: TestResource) => {
       res should be theSameInstanceAs Resource.get
-      verifyZeroInteractions(res)
+      verifyNoInteractions(res)
     })
     managedFn(Resource.init)
     verify(Resource.get).close()
