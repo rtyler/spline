@@ -16,7 +16,7 @@
 
 package za.co.absa.spline.common
 
-import za.co.absa.spline.common.ARM._
+import za.co.absa.commons.lang.ARM._
 
 object SplineBuildInfo {
   val BuildProps: ImmutableProperties =

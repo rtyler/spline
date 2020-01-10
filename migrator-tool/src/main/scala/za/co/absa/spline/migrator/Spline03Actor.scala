@@ -28,7 +28,7 @@ import com.mongodb.client.model.Field
 import com.mongodb.client.model.Filters.and
 import com.mongodb.client.model.Projections.{fields, include}
 import org.bson.Document.parse
-import za.co.absa.spline.common.ARM.managed
+import za.co.absa.commons.lang.ARM.managed
 import za.co.absa.spline.migrator.Spline03Actor._
 import za.co.absa.spline.model.DataLineageId.toDatasetId
 import za.co.absa.spline.model.{DataLineage, PersistedDatasetDescriptor}

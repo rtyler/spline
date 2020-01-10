@@ -24,7 +24,7 @@ import org.scalatest.OneInstancePerTest
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import org.scalatestplus.mockito.MockitoSugar
-import za.co.absa.spline.common.scalatest.{ConsoleStubs, MatcherImplicits, SystemExitFixture}
+import za.co.absa.commons.scalatest.{ConsoleStubs, MatcherImplicits, SystemExitFixture}
 
 import scala.concurrent.ExecutionContext
 
